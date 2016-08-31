@@ -1,0 +1,34 @@
+{
+  "name": "gulp",
+  "version": "1.0.0",
+  "description": "This App will shows employee directory for any company.",
+  "main": "index.js",
+  "dependencies": {
+    "compass": "^0.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^5.0.0",
+    "gulp-htmlhint": "^0.3.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joshinishchal/routinesForm.git"
+  },
+  "author": "Nishchal A. Joshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joshinishchal/routinesForm/issues"
+  },
+  "homepage": "https://github.com/joshinishchal/routinesForm#readme"
+}
