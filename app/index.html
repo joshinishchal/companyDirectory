@@ -6,12 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/stylesheet.css">
 
     <title>Contact List</title>
 </head>
 <body>
-    <div data-ng-controller="contactListController" class="container">
-
+    <div data-ng-controller="contactListController" class="container-fluid">
+        <header class="row">
+            <h2 class="col-xs-4 col-sm-4 col-md-2 col-lg-2 col-md-offset-1 col-lg-offset-1">Contact List</h2>
+            <form class="col-xs-8 col-sm-8 col-md-6 col-lg-6 form-group">
+                <input type="search" name="search" id="search" placeholder="search.." data-ng-model="searchText" class="form-control col-xs-8 col-sm-8 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 input-lg">
+            </form>
+        </header>
+        <section>
+            <div id="contactList" class="contact-list">
+                <div class="contact" data-ng-repeat="contact in contacts">
+                        <p>
+                            <img src="{{contact.profile_image}}" class="contact-image">
+                            <!--//contact.icon-->
+                            <!--//style="background-image:url('https://s3.amazonaws.com/honeybook_cdn/assets_users_production/companies/532b267c46ecaccbf1000144/icons/2014-10-02-18-59-41-959.png');"-->
+                        </p>
+                        <div class="contact-description-container" style="background-image:url({{contact.icon}});">
+                            <h6 class="contact-name" data-ng-bind="contact.name"></h6>
+                            <p class="contact-work-details" data-ng-bind="contact.job"></p>
+                            <p class="contact-phone" data-ng-bind="contact.phone"></p>
+                            <p class="contact-email" data-ng-bind="contact.email"></p>
+                        </div>
+                </div>
+            </div>
+        </section>
     </div>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" defer></script>

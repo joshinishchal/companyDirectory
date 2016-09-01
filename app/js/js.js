@@ -28,8 +28,7 @@ contactListApp.service("getContacts", ["$http", "$localStorage", function getCon
         if(typeof ($localStorage.contacts) !== "undefined"){
             getContactTimeout = 1000;
         }
-        console.log("timeout: " + getContactTimeout);
-        console.log("$localStorage.contacts: " + JSON.stringify($localStorage.contacts));
+
         var success = function(response){
             $localStorage.contacts = response.data;
             successCallback(response.data);
@@ -51,7 +50,6 @@ contactListApp.service("getContacts", ["$http", "$localStorage", function getCon
 contactListApp.controller("contactListController", ["$scope", "getContacts", function contactListController($scope, getContacts){
 
     getContacts.getContacts(function(contacts){
-        console.log("success");
         $scope.contacts = contacts;
     },function(response){
         //Do something here
