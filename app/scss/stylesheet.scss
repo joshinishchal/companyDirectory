@@ -5,11 +5,12 @@
 .container-fluid{
     border: 10px solid grey;
         & section{
-            background-color:grey;
+            background-color:#D3D3D3;
             display:-webkit-flex;
             display:flex;
 
                 & .contact-list{
+                    width:680px;
                     display:-webkit-flex;
                     display:flex;
                     -webkit-flex-direction:row;
