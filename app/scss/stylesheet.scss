@@ -8,9 +8,14 @@
             background-color:#D3D3D3;
             display:-webkit-flex;
             display:flex;
+            -webkit-justify-content:center;
+            justify-content:center;
+            -webkit-align-items:center;
+            aligh-items:center;
+            padding:45px;
 
                 & .contact-list{
-                    width:680px;
+                    width:700px;
                     display:-webkit-flex;
                     display:flex;
                     -webkit-flex-direction:row;
