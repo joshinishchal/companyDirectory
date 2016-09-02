@@ -21,10 +21,8 @@
         <section>
             <div id="contactList" class="contact-list">
                 <div class="contact" data-ng-repeat="contact in contacts">
-                        <p>
-                            <img src="{{contact.profile_image}}" class="contact-image">
-                        </p>
-                        <div class="contact-description-container" style="background-image:url({{contact.icon}});">
+                        <div class="contact-image" style="background-image:url({{contact.icon}}), url({{contact.profile_image}});"></div>
+                        <div class="contact-description-container">
                             <h6 class="contact-name" data-ng-bind="contact.name"></h6>
                             <p class="contact-work-details" data-ng-bind="contact.job"></p>
                             <p class="contact-phone" data-ng-bind="contact.phone"></p>
