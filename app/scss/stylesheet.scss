@@ -9,7 +9,7 @@
 }
 
 .contactListContainer{
-    border: 1px solid #D3D3D3;
+    border:1px solid $grey-shade;
     margin:5%;
     padding-left:0px;
     padding-right:0px;
@@ -19,32 +19,27 @@
             @include align-items(center);
 
                 & h2, form{
-                    @include display-flex;
-                    @include justify-content(center);
+                    @extend %flex-justify-center;
                 }
         }
         & section{
-            background-color:#D3D3D3;
-            @include display-flex;
-            @include justify-content(center);
-            @include align-items(center);
+            background-color:$grey-shade;
+            @extend %flex-center;
             padding:45px;
 
                 & .contact-list{
-                    width:63.56%;
-                    @include display-flex;
+                    width:64.32%;
+                    @extend %flex-justify-center;
                     @include flex-direction(row);
                     @include flex-wrap(wrap);
 
-                    @include justify-content(center);
-
                         & .contact{
-                            width:165px;
-                            height:205px;
+                            width:$contactBox-width;
+                            height:$contactBox-height;
                             padding:11px 11px 11px 14px;
                             background-color:white;
                             border:1px silid grey;
-                            margin-right:3px;
+                            margin-right:5px;
                             margin-bottom:10px;
 
 
@@ -89,6 +84,7 @@
                         }
 
                         & .contact:hover{
+                            @include box-shadow(#808080 3px 3px 3px 3px);
 
                             & .contact-description-container{
                                 height:28px+50px;
