@@ -48,6 +48,8 @@
                                     margin:0;
                                     padding:0;
                                     border:0;
+                                    background-position:-99999px -99999px;
+                                    background-repeat:no-repeat;
 
                                     & p{
                                         color:black;
@@ -70,7 +72,11 @@
                                 position:relative;
                                 top:-50px-23px;
                                 background-color:white;
+                                background-position:0px -23px;
+                                background-size: 45px 45px;
+                                background-repeat:no-repeat;
                                 padding-top:23px;
+                                background-origin:border-box;
                             }
 
                             & .contact-phone, .contact-email{
@@ -79,7 +85,7 @@
                             }
 
                             & .contact-image{
-                                    background-position: 0px 128px-50px-23px, left top;
+                                    background-position: 0px 128px-23px-50px, left top;
                             }
 
                         }
