@@ -37,7 +37,7 @@
                                     width: 140px;
                                     height: 150px;
                                     background-size: 45px 45px, 140px 128px;
-                                    background-color: transparent !important;
+                                    background-color: transparent, transparent;
                                     background-repeat:no-repeat, no-repeat;
                                     background-position: 0px 128px-23px, left top;
                                 }
@@ -61,6 +61,27 @@
                                         display:none;
                                     }
                                 }
+                        }
+
+                        & .contact:hover{
+
+                            & .contact-description-container{
+                                height:28px+50px;
+                                position:relative;
+                                top:-50px-23px;
+                                background-color:white;
+                                padding-top:23px;
+                            }
+
+                            & .contact-phone, .contact-email{
+                                display:-webkit-flex;
+                                display:flex;
+                            }
+
+                            & .contact-image{
+                                    background-position: 0px 128px-50px-23px, left top;
+                            }
+
                         }
                 }
         }
