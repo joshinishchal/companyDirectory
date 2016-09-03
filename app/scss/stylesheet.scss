@@ -2,8 +2,25 @@
     box-sizing: border-box;
 }
 
-.container-fluid{
-    border: 10px solid grey;
+.contactListContainer{
+    border: 1px solid #D3D3D3;
+    margin:5%;
+    padding-left:0px;
+    padding-right:0px;
+        & header{
+            height:80px;
+            display:-webkit-flex;
+            display:flex;
+            -webkit-align-items:center;
+            align-items:center;
+
+                & h2, form{
+                    display:-webkit-flex;
+                    display:flex;
+                    -webkit-justify-content:center;
+                    justify-content:center;
+                }
+        }
         & section{
             background-color:#D3D3D3;
             display:-webkit-flex;
@@ -11,7 +28,7 @@
             -webkit-justify-content:center;
             justify-content:center;
             -webkit-align-items:center;
-            aligh-items:center;
+            align-items:center;
             padding:45px;
 
                 & .contact-list{
