@@ -2,6 +2,7 @@
 @import "variables";
 @import "mixins";
 @import "compass/css3";
+@import "font-awesome/font-awesome";
 
 
 *{
@@ -20,6 +21,17 @@
 
                 & h2, form{
                     @extend %flex-justify-center;
+                }
+
+                & .search-input{
+                    padding-right:25px;
+                }
+
+                & .search-icon{
+                    position:absolute;
+                    right:20px;
+                    top:12px;
+                    color:grey;
                 }
         }
         & section{
@@ -68,6 +80,7 @@
                                     & p{
                                         color:grey;
                                         font-size:10px;
+                                        line-height:12px;
                                         margin:0;
                                         padding:0;
                                         border:0;

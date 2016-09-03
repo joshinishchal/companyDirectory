@@ -9,7 +9,6 @@ contactListApp.service("getContacts", ["$http", "$localStorage", function getCon
             url : url,
             responseType : "json"
             //you can add cache as well or showoff localStorage knowledge
-            //cache : $templateCache
 
         }).then(function(response){
             //Success Callback
