@@ -68,12 +68,20 @@
                                     background-position:-99999px -99999px;
                                     background-repeat:no-repeat;
 
+                                    & h6{
+                                        margin-bottom:0px;
+                                    }
+
                                     & p{
-                                        color:black;
+                                        color:grey;
                                         font-size:10px;
                                         margin:0;
                                         padding:0;
                                         border:0;
+
+                                            & a{
+                                                color:grey;
+                                            }
                                     }
 
                                     & .contact-phone, .contact-email{

@@ -13,8 +13,8 @@
 <body>
     <div data-ng-controller="contactListController" class="container-fluid contactListContainer">
         <header class="row">
-            <h2 class="col-xs-4 col-sm-4 col-md-6 col-lg-6">Contact List</h2>
-            <form class="col-xs-8 col-sm-8 col-md-5 col-lg-5 form-group">
+            <h2 class="col-xs-12 col-sm-12 col-md-6 col-lg-6">Contact List</h2>
+            <form class="col-xs-14 col-sm-14 col-md-5 col-lg-5 form-group">
                 <input type="search" name="search" id="search" placeholder="search.." data-ng-model="searchText" class="form-control input-md">
             </form>
         </header>
@@ -24,9 +24,9 @@
                         <div class="contact-image" style="background-image:url({{contact.icon}}), url({{contact.profile_image}});"></div>
                         <div class="contact-description-container" style="background-image:url({{contact.icon}});">
                             <h6 class="contact-name" data-ng-bind="contact.name"></h6>
-                            <p class="contact-work-details" data-ng-bind="contact.job"></p>
-                            <p class="contact-phone" data-ng-bind="contact.phone"></p>
-                            <p class="contact-email" data-ng-bind="contact.email"></p>
+                            <p class="contact-work-details" data-ng-bind="getJobStr(contact.job,contact.company_name)"></p>
+                            <p class="contact-phone" data-ng-bind="getPhoneString(contact.phone)"></p>
+                            <p class="contact-email"><a href="mailto:{{contact.email}}?Subject=Nishchal-Says-Hello" target="_top" data-ng-bind="contact.email"/></a></p>
                         </div>
                 </div>
             </div>

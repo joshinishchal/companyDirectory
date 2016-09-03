@@ -46,8 +46,31 @@ contactListApp.service("getContacts", ["$http", "$localStorage", function getCon
     };
 }]);
 
+contactListApp.service("stModifiers", [function stModifiers(){
 
-contactListApp.controller("contactListController", ["$scope", "getContacts", function contactListController($scope, getContacts){
+    this.getPhoneString = function(phone){
+        if(phone != ""){
+            return 'Phone Number: ' + phone;
+        }else{
+            return '';
+        }
+    }
+
+    this.getJobStr = function(job, company){
+        if(job != "" && company != ""){
+            return job + ' | ' + company;
+        }else if(job == "" && company != ""){
+            return company;
+        }else if(job != ""){
+            return job;
+        }
+    }
+
+
+}]);
+
+
+contactListApp.controller("contactListController", ["$scope", "getContacts", "stModifiers", function contactListController($scope, getContacts, stModifiers){
 
     getContacts.getContacts(function(contacts){
         $scope.contacts = contacts;
@@ -56,5 +79,7 @@ contactListApp.controller("contactListController", ["$scope", "getContacts", fun
         console.log("it Failed. Status Code: " + response.code);
     });
 
+    $scope.getPhoneString = stModifiers.getPhoneString;
+    $scope.getJobStr = stModifiers.getJobStr;
 
 }]);
