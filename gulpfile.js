@@ -16,7 +16,7 @@ gulp.task("scripts", function(){
         suffix:".min"
     }))
     .pipe(uglify())
-    .pipe(gulp.dest("app/js/minified/"));
+    .pipe(gulp.dest("app/minifiedJS/"));
 });
 
 gulp.task("compass", function() {

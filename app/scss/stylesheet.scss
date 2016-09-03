@@ -7,6 +7,8 @@
 
 *{
     @include box-sizing(border-box);
+    @include font-face("Avenir Next", font-files("/fonts/Avenir-Next.otf"));
+    font-family: Avenir Next, calibri, 'Open Sans', 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 .contactListContainer{
@@ -41,7 +43,7 @@
 
                 & .contact-list{
                     width:64.32%;
-                    @extend %flex-justify-center;
+                    @extend %flex-justify-start;
                     @include flex-direction(row);
                     @include flex-wrap(wrap);
 

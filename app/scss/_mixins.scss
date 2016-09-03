@@ -8,3 +8,8 @@
     @include display-flex;
     @include justify-content(center);
 }
+
+%flex-justify-start{
+    @include display-flex;
+    @include justify-content(flex-start);
+}
