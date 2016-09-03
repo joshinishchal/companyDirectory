@@ -4,7 +4,7 @@ require "compass/import-once/activate"
 project_type = :stand_alone
 http_path = "./app"
 css_dir = "css"
-sass_dir = "scss"
+scss_dir = "scss"
 images_dir = "img"
 javascripts_dir = "js"
 fonts_dir = "fonts"

@@ -1,5 +1,11 @@
+@import "compass";
+@import "variables";
+@import "mixins";
+@import "compass/css3";
+
+
 *{
-    box-sizing: border-box;
+    @include box-sizing(border-box);
 }
 
 .contactListContainer{
@@ -9,38 +15,28 @@
     padding-right:0px;
         & header{
             height:80px;
-            display:-webkit-flex;
-            display:flex;
-            -webkit-align-items:center;
-            align-items:center;
+            @include display-flex;
+            @include align-items(center);
 
                 & h2, form{
-                    display:-webkit-flex;
-                    display:flex;
-                    -webkit-justify-content:center;
-                    justify-content:center;
+                    @include display-flex;
+                    @include justify-content(center);
                 }
         }
         & section{
             background-color:#D3D3D3;
-            display:-webkit-flex;
-            display:flex;
-            -webkit-justify-content:center;
-            justify-content:center;
-            -webkit-align-items:center;
-            align-items:center;
+            @include display-flex;
+            @include justify-content(center);
+            @include align-items(center);
             padding:45px;
 
                 & .contact-list{
                     width:63.56%;
-                    display:-webkit-flex;
-                    display:flex;
-                    -webkit-flex-direction:row;
-                    flex-direction:row;
-                    -webkit-flex-wrap:wrap;
-                    flex-wrap:wrap;
-                    -webkit-justify-content:center;
-                    justify-content:center;
+                    @include display-flex;
+                    @include flex-direction(row);
+                    @include flex-wrap(wrap);
+
+                    @include justify-content(center);
 
                         & .contact{
                             width:165px;
@@ -107,8 +103,7 @@
                             }
 
                             & .contact-phone, .contact-email{
-                                display:-webkit-flex;
-                                display:flex;
+                                @include display-flex;
                             }
 
                             & .contact-image{
